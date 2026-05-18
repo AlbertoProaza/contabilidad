@@ -59,7 +59,7 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Title */}
         <div>
-          <label className="block text-sm font-medium text-gray-200 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Título
           </label>
           <input
@@ -67,13 +67,13 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Ej: Revisar propuesta de cliente"
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-colors"
+            className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-colors"
           />
         </div>
 
         {/* Description */}
         <div>
-          <label className="block text-sm font-medium text-gray-200 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Descripción (opcional)
           </label>
           <textarea
@@ -81,19 +81,19 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Detalles adicionales..."
             rows={3}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gray-600 transition-colors resize-none"
+            className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-colors resize-none"
           />
         </div>
 
         {/* Column */}
         <div>
-          <label className="block text-sm font-medium text-gray-200 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Asignar a
           </label>
           <select
             value={columnId}
             onChange={(e) => setColumnId(e.target.value as ColumnId)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-600 transition-colors"
+            className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-colors"
           >
             {Object.values(COLUMNS)
               .filter((col) => col.id !== 'completadas')
@@ -107,7 +107,7 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
 
         {/* Priority */}
         <div>
-          <label className="block text-sm font-medium text-gray-200 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Prioridad
           </label>
           <div className="flex gap-2">
@@ -119,8 +119,8 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
                 className={cn(
                   'flex-1 py-2 px-3 rounded-lg font-medium text-sm transition-all',
                   priority === p
-                    ? 'bg-white text-black'
-                    : 'bg-gray-800 border border-gray-700 text-gray-300 hover:border-gray-600'
+                    ? 'bg-amber-900 text-white'
+                    : 'bg-gray-100 border border-gray-300 text-gray-700 hover:bg-gray-200'
                 )}
               >
                 {PRIORITY_LABELS[p]}
@@ -131,14 +131,14 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
 
         {/* Due Date */}
         <div>
-          <label className="block text-sm font-medium text-gray-200 mb-2">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
             Fecha límite (opcional)
           </label>
           <input
             type="date"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-            className="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-gray-600 transition-colors"
+            className="w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:border-amber-900 focus:ring-1 focus:ring-amber-900 transition-colors"
           />
         </div>
 

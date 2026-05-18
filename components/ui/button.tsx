@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-white text-black hover:bg-gray-100 focus-visible:ring-offset-black',
-        secondary: 'bg-gray-800 text-white hover:bg-gray-700 focus-visible:ring-offset-black',
-        ghost: 'text-gray-400 hover:text-white hover:bg-gray-800/50 focus-visible:ring-offset-black',
-        destructive: 'bg-red-500/10 text-red-400 hover:bg-red-500/20 focus-visible:ring-offset-black',
+        default: 'bg-amber-900 text-white hover:bg-amber-800 focus-visible:ring-offset-white',
+        secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus-visible:ring-offset-white',
+        ghost: 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus-visible:ring-offset-white',
+        destructive: 'bg-red-100 text-red-700 hover:bg-red-200 focus-visible:ring-offset-white',
       },
       size: {
         default: 'h-10 px-4 py-2 text-sm',

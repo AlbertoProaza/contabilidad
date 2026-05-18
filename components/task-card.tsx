@@ -43,8 +43,8 @@ export function TaskCard({ task, index }: TaskCardProps) {
       exit={{ opacity: 0, y: -20 }}
       transition={{ delay: index * 0.05 }}
       className={cn(
-        'group relative p-4 rounded-lg border transition-all hover:shadow-lg',
-        'bg-gray-800/40 border-gray-700 hover:border-gray-600 hover:bg-gray-800/60'
+        'group relative p-4 rounded-lg border transition-all hover:shadow-md',
+        'bg-white border-gray-200 hover:border-gray-300 hover:bg-gray-50'
       )}
     >
       {/* Priority indicator */}
@@ -53,12 +53,12 @@ export function TaskCard({ task, index }: TaskCardProps) {
       <div className="pl-2 space-y-3">
         {/* Title */}
         <div>
-          <h3 className="font-semibold text-white text-sm leading-tight">{task.title}</h3>
+          <h3 className="font-semibold text-gray-900 text-sm leading-tight">{task.title}</h3>
         </div>
 
         {/* Description */}
         {task.description && (
-          <p className="text-gray-400 text-xs leading-relaxed">{task.description}</p>
+          <p className="text-gray-600 text-xs leading-relaxed">{task.description}</p>
         )}
 
         {/* Metadata */}
@@ -88,7 +88,7 @@ export function TaskCard({ task, index }: TaskCardProps) {
             size="sm"
             variant="ghost"
             onClick={() => deleteTask(task.id)}
-            className="text-red-400 hover:text-red-300"
+            className="text-red-700 hover:text-red-800"
           >
             <Trash2 size={14} />
           </Button>

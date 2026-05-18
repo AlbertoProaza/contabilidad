@@ -11,14 +11,14 @@ export function Board() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="sticky top-0 z-30 border-b border-gray-800 bg-black/80 backdrop-blur-sm">
+      <header className="sticky top-0 z-30 border-b border-gray-200 bg-white/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex items-center justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-white">Task Board</h1>
-              <p className="text-gray-400 text-sm mt-1">
+              <h1 className="text-2xl font-bold text-gray-900">Task Board</h1>
+              <p className="text-gray-600 text-sm mt-1">
                 Organiza tus tareas de forma visual y colaborativa
               </p>
             </div>

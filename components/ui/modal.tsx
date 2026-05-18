@@ -23,7 +23,7 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -34,12 +34,12 @@ export function Modal({ isOpen, onClose, title, children, className }: ModalProp
               className
             )}
           >
-            <div className="bg-gray-900 border border-gray-800 rounded-xl shadow-2xl">
-              <div className="flex items-center justify-between p-6 border-b border-gray-800">
-                <h2 className="text-lg font-semibold text-white">{title}</h2>
+            <div className="bg-white border border-gray-200 rounded-xl shadow-xl">
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
                 <button
                   onClick={onClose}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
                 >
                   <X size={20} />
                 </button>

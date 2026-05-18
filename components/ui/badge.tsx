@@ -10,10 +10,10 @@ interface BadgeProps {
 
 export function Badge({ label, variant = 'default', className }: BadgeProps) {
   const variants = {
-    default: 'bg-gray-700 text-gray-100',
-    secondary: 'bg-gray-600 text-gray-100',
-    destructive: 'bg-red-500/20 text-red-400',
-    success: 'bg-green-500/20 text-green-400',
+    default: 'bg-amber-100 text-amber-900',
+    secondary: 'bg-gray-200 text-gray-700',
+    destructive: 'bg-red-100 text-red-700',
+    success: 'bg-green-100 text-green-700',
   };
 
   return (

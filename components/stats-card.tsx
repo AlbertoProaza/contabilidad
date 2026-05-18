@@ -23,46 +23,46 @@ export function StatsCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {/* Total */}
-      <div className="px-4 py-4 rounded-lg border border-gray-700 bg-gray-800/30">
+      <div className="px-4 py-4 rounded-lg border border-gray-200 bg-white">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-gray-400 text-sm font-medium">Total</p>
-            <p className="text-2xl font-bold text-white mt-1">{stats.total}</p>
+            <p className="text-gray-600 text-sm font-medium">Total</p>
+            <p className="text-2xl font-bold text-gray-900 mt-1">{stats.total}</p>
           </div>
-          <ListTodo className="text-gray-500" size={24} />
+          <ListTodo className="text-gray-400" size={24} />
         </div>
       </div>
 
       {/* Pending */}
-      <div className="px-4 py-4 rounded-lg border border-gray-700 bg-gray-800/30">
+      <div className="px-4 py-4 rounded-lg border border-gray-200 bg-white">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-gray-400 text-sm font-medium">Pendientes</p>
-            <p className="text-2xl font-bold text-white mt-1">{stats.pending}</p>
+            <p className="text-gray-600 text-sm font-medium">Pendientes</p>
+            <p className="text-2xl font-bold text-gray-900 mt-1">{stats.pending}</p>
           </div>
-          <AlertCircle className="text-blue-500" size={24} />
+          <AlertCircle className="text-blue-600" size={24} />
         </div>
       </div>
 
       {/* Urgent */}
-      <div className="px-4 py-4 rounded-lg border border-gray-700 bg-gray-800/30">
+      <div className="px-4 py-4 rounded-lg border border-gray-200 bg-white">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-gray-400 text-sm font-medium">Urgentes</p>
-            <p className="text-2xl font-bold text-red-400 mt-1">{stats.urgent}</p>
+            <p className="text-gray-600 text-sm font-medium">Urgentes</p>
+            <p className="text-2xl font-bold text-red-600 mt-1">{stats.urgent}</p>
           </div>
-          <AlertCircle className="text-red-500" size={24} />
+          <AlertCircle className="text-red-600" size={24} />
         </div>
       </div>
 
       {/* Completed */}
-      <div className="px-4 py-4 rounded-lg border border-gray-700 bg-gray-800/30">
+      <div className="px-4 py-4 rounded-lg border border-gray-200 bg-white">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-gray-400 text-sm font-medium">Completadas</p>
-            <p className="text-2xl font-bold text-green-400 mt-1">{stats.completed}</p>
+            <p className="text-gray-600 text-sm font-medium">Completadas</p>
+            <p className="text-2xl font-bold text-green-600 mt-1">{stats.completed}</p>
           </div>
-          <CheckCircle2 className="text-green-500" size={24} />
+          <CheckCircle2 className="text-green-600" size={24} />
         </div>
       </div>
     </div>

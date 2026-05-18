@@ -25,19 +25,19 @@ export const COLUMNS: Record<string, Column> = {
 
 export const PRIORITY_COLORS: Record<Priority, { bg: string; text: string; badge: string }> = {
   baja: {
-    bg: 'bg-blue-500/10',
-    text: 'text-blue-400',
-    badge: 'bg-blue-500/20 text-blue-400',
+    bg: 'bg-blue-100',
+    text: 'text-blue-700',
+    badge: 'bg-blue-100 text-blue-700',
   },
   media: {
-    bg: 'bg-amber-500/10',
-    text: 'text-amber-400',
-    badge: 'bg-amber-500/20 text-amber-400',
+    bg: 'bg-amber-100',
+    text: 'text-amber-700',
+    badge: 'bg-amber-100 text-amber-700',
   },
   alta: {
-    bg: 'bg-red-500/10',
-    text: 'text-red-400',
-    badge: 'bg-red-500/20 text-red-400',
+    bg: 'bg-red-100',
+    text: 'text-red-700',
+    badge: 'bg-red-100 text-red-700',
   },
 };
 

@@ -22,11 +22,11 @@ export function Column({ columnId }: ColumnProps) {
   return (
     <div className="flex flex-col gap-4 flex-1 min-w-0">
       {/* Column Header */}
-      <div className="px-4 py-3 rounded-lg border border-gray-700 bg-gray-800/30">
+      <div className="px-4 py-3 rounded-lg border border-gray-200 bg-white">
         <div className="flex items-center gap-3">
           <span className="text-xl">{column.icon}</span>
           <div>
-            <h2 className="font-semibold text-white text-sm">{column.title}</h2>
+            <h2 className="font-semibold text-gray-900 text-sm">{column.title}</h2>
             <p className="text-gray-500 text-xs">
               {columnTasks.length} {columnTasks.length === 1 ? 'tarea' : 'tareas'}
             </p>
@@ -38,7 +38,7 @@ export function Column({ columnId }: ColumnProps) {
       <div className="space-y-3 flex-1">
         <AnimatePresence mode="popLayout">
           {columnTasks.length === 0 ? (
-            <div className="flex items-center justify-center py-8 px-4 rounded-lg border border-dashed border-gray-700 text-gray-500 text-sm">
+            <div className="flex items-center justify-center py-8 px-4 rounded-lg border border-dashed border-gray-300 text-gray-500 text-sm">
               Sin tareas
             </div>
           ) : (
