@@ -43,13 +43,13 @@ export function AddScriptModal({ isOpen, onClose, editingScript }: AddScriptModa
 
     try {
       if (editingScript) {
-        updateScript(editingScript.id, {
+        await updateScript(editingScript.id, {
           title: title.trim(),
           content: content.trim(),
           dueDate: dueDate || undefined,
         });
       } else {
-        addScript({
+        await addScript({
           title: title.trim(),
           content: content.trim(),
           status: 'pendiente',

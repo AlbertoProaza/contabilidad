@@ -9,12 +9,14 @@ import { ScriptCard } from './script-card';
 import { ScriptsStatsCard } from './scripts-stats-card';
 import { AddScriptModal } from './add-script-modal';
 import { Button } from './ui/button';
+import { useInitializeStores } from '@/hooks/use-initialize-stores';
 
 export function ScriptsBoard() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [editingScript, setEditingScript] = useState<Script | null>(null);
 
   const scripts = useScriptStore((state) => state.scripts);
+  useInitializeStores();
 
   const handleEdit = (script: Script) => {
     setEditingScript(script);

@@ -24,9 +24,9 @@ export function TaskCard({ task, index }: TaskCardProps) {
     return columnOrder[(currentIndex + 1) % columnOrder.length];
   };
 
-  const handleMoveNext = () => {
+  const handleMoveNext = async () => {
     const nextColumn = getNextColumn(task.columnId);
-    moveTask(task.id, nextColumn);
+    await moveTask(task.id, nextColumn);
   };
 
   const formatDate = (date?: string) => {

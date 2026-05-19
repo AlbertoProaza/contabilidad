@@ -6,9 +6,11 @@ import { Column } from './column';
 import { StatsCard } from './stats-card';
 import { AddTaskModal } from './add-task-modal';
 import { Button } from './ui/button';
+import { useInitializeStores } from '@/hooks/use-initialize-stores';
 
 export function Board() {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+  useInitializeStores();
 
   return (
     <div className="min-h-screen bg-gray-50">

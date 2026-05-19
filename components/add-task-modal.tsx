@@ -33,7 +33,7 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
     setIsSubmitting(true);
 
     try {
-      addTask({
+      await addTask({
         title: title.trim(),
         description: description.trim() || undefined,
         priority,
