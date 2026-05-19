@@ -1,7 +1,7 @@
 'use client';
 
-import { Board } from '@/components/board';
+import { AppTabs } from '@/components/app-tabs';
 
 export default function Home() {
-  return <Board />;
+  return <AppTabs />;
 }
